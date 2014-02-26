@@ -124,6 +124,58 @@ int main(int argc, char** argv) {
 		tableauContientDouble(tableauE, 3)
 	);
 
+	char* chaineA = "Bonjour";
+	char* chaineB = "Bonjour le monde";
+	char* chaineC = "kayak";
+	char* chaineD = "lolol";
+	char* chaineE = "Bonjour";
+
+	evalueQuestion(
+		17,
+		longueurChaine(chaineA) == 7 &&
+		longueurChaine(chaineB) == 16 &&
+		longueurChaine(chaineC) == 5 &&
+		longueurChaine(chaineD) == 5
+	);
+
+	evalueQuestion(
+		18,
+		!chainesSontIdentiques(chaineA, chaineB) &&
+		chainesSontIdentiques(chaineA, chaineE)
+	);
+
+	evalueQuestion(
+		19,
+		frequenceCaractere(chaineC, 'k') == 2 &&
+		frequenceCaractere(chaineC, 'a') == 2 &&
+		frequenceCaractere(chaineC, 'y') == 1 &&
+		frequenceCaractere(chaineC, 'z') == 0
+	);
+
+	evalueQuestion(
+		20,
+		nombreDeMots(chaineA) == 1 &&
+		nombreDeMots(chaineB) == 3 &&
+		nombreDeMots(chaineC) == 1
+	);
+
+	evalueQuestion(
+		21,
+		!contientCaractere(chaineA, 'a') &&
+		!contientCaractere(chaineA, 'b') &&
+		contientCaractere(chaineA, 'o') &&
+		contientCaractere(chaineA, 'u')
+	);
+
+	evalueQuestion(
+		22,
+		indexAlphabetCaractere('a') == 0 &&
+		indexAlphabetCaractere('A') == 0 &&
+		indexAlphabetCaractere('z') == 25 &&
+		indexAlphabetCaractere('Z') == 25 &&
+		indexAlphabetCaractere('c') == 2
+	);
+
 	printf("\nScore: %d/32\n", score);
 
 	return 0;
