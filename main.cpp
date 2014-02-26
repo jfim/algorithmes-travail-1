@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 		tableauEntiersTemporaire[2] == 5
 	);
 
-	frequenceTableau(tableauD, 3);
+	frequenceUnTableau(tableauD, 3);
 	evalueQuestion(
 		12,
 		frequences[0] == 0 &&
@@ -95,7 +95,7 @@ int main(int argc, char** argv) {
 	evalueQuestion(
 		13,
 		frequences[0] == 2 &&
-		frequences[1] == 0 &&
+		frequences[1] == 1 &&
 		valeursEntieres[0] == 2 &&
 		valeursEntieres[1] == 4
 	);
@@ -129,6 +129,7 @@ int main(int argc, char** argv) {
 	char* chaineC = "kayak";
 	char* chaineD = "lolol";
 	char* chaineE = "Bonjour";
+	char* chaineF = "Allo!";
 
 	evalueQuestion(
 		17,
@@ -174,6 +175,47 @@ int main(int argc, char** argv) {
 		indexAlphabetCaractere('z') == 25 &&
 		indexAlphabetCaractere('Z') == 25 &&
 		indexAlphabetCaractere('c') == 2
+	);
+
+	frequenceLettres(chaineA);
+	evalueQuestion(
+		23,
+		frequences[indexAlphabetCaractere('B')] == 1 &&
+		frequences[indexAlphabetCaractere('o')] == 2 &&
+		frequences[indexAlphabetCaractere('n')] == 1 &&
+		frequences[indexAlphabetCaractere('j')] == 1 &&
+		frequences[indexAlphabetCaractere('u')] == 1 &&
+		frequences[indexAlphabetCaractere('r')] == 1
+	);
+
+	frequenceLettres(chaineF);
+	evalueQuestion(
+		24,
+		valeursCaracteres[0] == 'A' && frequences[0] == 1 &&
+		valeursCaracteres[1] == 'l' && frequences[1] == 2 &&
+		valeursCaracteres[2] == 'o' && frequences[2] == 1 &&
+		valeursCaracteres[3] == '!' && frequences[3] == 1
+	);
+
+	evalueQuestion(
+		25,
+		plusFrequent(chaineF) == 'l' &&
+		plusFrequent(chaineD) == 'l' &&
+		plusFrequent(chaineE) == 'o'
+	);
+
+	evalueQuestion(
+		26,
+		caracteresDistincts(chaineF) == 4 &&
+		caracteresDistincts(chaineD) == 2 &&
+		caracteresDistincts(chaineC) == 3
+	);
+
+	chaineSansCaractere(chaineA, 'o');
+	char* chaineAsansO = "Bnjur";
+	evalueQuestion(
+		27,
+		chainesSontIdentiques(chaineCaracteresTemporaire, chaineAsansO)
 	);
 
 	printf("\nScore: %d/32\n", score);
