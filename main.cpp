@@ -72,6 +72,58 @@ int main(int argc, char** argv) {
 		!tableauContientChiffresIdentiquesAdjacents(tableauE, 3)
 	);
 
+	inverseTableau(tableauE, 3);
+	evalueQuestion(
+		11,
+		tableauEntiersTemporaire[0] == 4 &&
+		tableauEntiersTemporaire[1] == 2 &&
+		tableauEntiersTemporaire[2] == 5
+	);
+
+	frequenceTableau(tableauD, 3);
+	evalueQuestion(
+		12,
+		frequences[0] == 0 &&
+		frequences[1] == 0 &&
+		frequences[2] == 2 &&
+		frequences[3] == 0 &&
+		frequences[4] == 1 &&
+		frequences[5] == 0
+	);
+
+	frequenceDeuxTableaux(tableauD, 3);
+	evalueQuestion(
+		13,
+		frequences[0] == 2 &&
+		frequences[1] == 0 &&
+		valeursEntieres[0] == 2 &&
+		valeursEntieres[1] == 4
+	);
+
+	evalueQuestion(
+		14,
+		!tableauContientChiffresDupliques(tableauA, 3) &&
+		!tableauContientChiffresDupliques(tableauC, 3) &&
+		tableauContientChiffresDupliques(tableauD, 3) &&
+		!tableauContientChiffresDupliques(tableauE, 3)
+	);
+
+	evalueQuestion(
+		15,
+		tableauContientChiffre(tableauE, 3, 2) &&
+		!tableauContientChiffre(tableauE, 3, 3) &&
+		tableauContientChiffre(tableauE, 3, 4) &&
+		tableauContientChiffre(tableauE, 3, 5)
+	);
+
+	evalueQuestion(
+		16,
+		!tableauContientDouble(tableauA, 3) &&
+		tableauContientDouble(tableauC, 3) &&
+		tableauContientDouble(tableauD, 3) &&
+		tableauContientDouble(tableauE, 3)
+	);
+
 	printf("\nScore: %d/32\n", score);
 
 	return 0;
