@@ -8,12 +8,12 @@ char valeursCaracteres[100] = {0};
 char chaineCaracteresTemporaire[100] = {0};
 
 // Procedures, fonctions et parametres
-/*void afficheParametre(char* parametre) {
+void afficheParametre(char* parametre) {
 }
 void afficheParametreConditionnellement(char* parametre, bool doitAfficher) {
 }
 void afficheSuccesEchec(char* parametre, bool succes) {
-}*/
+}
 int additionne(int a, int b) {
 	return 0;
 }
