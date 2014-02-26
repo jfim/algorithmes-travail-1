@@ -59,17 +59,17 @@ int main(int argc, char** argv) {
 
 	evalueQuestion(
 		9,
-		tableauCroissant(tableauA) &&
-		tableauCroissant(tableauC) &&
-		tableauCroissant(tableauD) &&
-		!tableauCroissant(tableauE)
+		tableauCroissant(tableauA, 3) &&
+		tableauCroissant(tableauC, 3) &&
+		tableauCroissant(tableauD, 3) &&
+		!tableauCroissant(tableauE, 3)
 	);
 
 	evalueQuestion(
 		10,
-		!tableauContientChiffresIdentiquesAdjacents(tableauA) &&
-		tableauContientChiffresIdentiquesAdjacents(tableauD) &&
-		!tableauContientChiffresIdentiquesAdjacents(tableauE)
+		!tableauContientChiffresIdentiquesAdjacents(tableauA, 3) &&
+		tableauContientChiffresIdentiquesAdjacents(tableauD, 3) &&
+		!tableauContientChiffresIdentiquesAdjacents(tableauE, 3)
 	);
 
 	printf("\nScore: %d/32\n", score);
