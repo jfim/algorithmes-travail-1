@@ -38,7 +38,7 @@ void frequenceLettres(char* chaine);
 void frequenceCaracteres(char* chaine);
 char plusFrequent(char* chaine);
 int caracteresDistincts(char* chaine);
-void chaineSansCaractere(char* chaine);
+void chaineSansCaractere(char* chaine, char caractereAOmettre);
 bool estPalindrome(char* chaine);
 
 // Structures
