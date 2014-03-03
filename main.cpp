@@ -36,6 +36,7 @@ int main(int argc, char** argv) {
 	int tableauC[] = { 1, 2, 4 };
 	int tableauD[] = { 2, 2, 4 };
 	int tableauE[] = { 5, 2, 4 };
+	int tableauF[] = { 2, 8, 42 };
 
 	evalueQuestion(
 		6,
@@ -118,10 +119,11 @@ int main(int argc, char** argv) {
 
 	evalueQuestion(
 		16,
-		!tableauContientDouble(tableauA, 3) &&
+		tableauContientDouble(tableauA, 3) &&
 		tableauContientDouble(tableauC, 3) &&
 		tableauContientDouble(tableauD, 3) &&
-		tableauContientDouble(tableauE, 3)
+		tableauContientDouble(tableauE, 3) &&
+		!tableauContientDouble(tableauF, 3)
 	);
 
 	char* chaineA = "Bonjour";
@@ -188,7 +190,7 @@ int main(int argc, char** argv) {
 		frequences[indexAlphabetCaractere('r')] == 1
 	);
 
-	frequenceLettres(chaineF);
+	frequenceCaracteres(chaineF);
 	evalueQuestion(
 		24,
 		valeursCaracteres[0] == 'A' && frequences[0] == 1 &&
@@ -233,7 +235,7 @@ int main(int argc, char** argv) {
 
 	p1.x = 10;
 	p1.y = 20;
-	p2.y = 13;
+	p2.x = 13;
 	p2.y = 16;
 	v.x = -10;
 	v.y = -10;
