@@ -218,6 +218,74 @@ int main(int argc, char** argv) {
 		chainesSontIdentiques(chaineCaracteresTemporaire, chaineAsansO)
 	);
 
+	evalueQuestion(
+		28,
+		estPalindrome(chaineC) &&
+		estPalindrome(chaineD) &&
+		!estPalindrome(chaineE) &&
+		!estPalindrome(chaineF)
+	);
+
+	// Structures
+	Point p1;
+	Point p2;
+	Vecteur v;
+
+	p1.x = 10;
+	p1.y = 20;
+	p2.y = 13;
+	p2.y = 16;
+	v.x = -10;
+	v.y = -10;
+	
+	Point p3 = appliqueVecteur(p1, v);
+	evalueQuestion(
+		29,
+		p3.x == 0 &&
+		p3.y == 10
+	);
+
+	evalueQuestion(
+		30,
+		distanceManhattan(p1, p2) == 7
+	);
+
+	evalueQuestion(
+		31,
+		distanceEuclidienne(p1, p2) == 5
+	);
+
+	// Mathematiques
+	evalueQuestion(
+		32,
+		!cerclesSontSuperposes(p1, 1, p2, 3) &&
+		cerclesSontSuperposes(p1, 3, p2, 3)
+	);
+
+	evalueQuestion(
+		33,
+		estPremier(5) &&
+		!estPremier(6) &&
+		estPremier(7) &&
+		!estPremier(8)
+	);
+
+	evalueQuestion(
+		34,
+		estCarre(9) &&
+		!estCarre(10) &&
+		estCarre(81) &&
+		!estCarre(99)
+	);
+
+	evalueQuestion(
+		35,
+		estImpair(1) &&
+		!estImpair(2) &&
+		estImpair(99) &&
+		!estImpair(100)
+	);
+
 	printf("\nScore: %d/32\n", score);
 
 	return 0;
