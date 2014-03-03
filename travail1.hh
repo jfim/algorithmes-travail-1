@@ -21,11 +21,11 @@ int sommeTableau(int* tableau, int longueur);
 bool tableauCroissant(int* tableau, int longueur);
 bool tableauContientChiffresIdentiquesAdjacents(int* tableau, int longueur);
 void inverseTableau(int* tableau, int longueur);
-void frequenceUnTableau(int* tableau);
-void frequenceDeuxTableaux(int* tableau);
-bool tableauContientChiffresDupliques(int* tableau);
-bool tableauContientChiffre(int* tableau, int chiffreRecherche);
-bool tableauContientDouble(int* tableau);
+void frequenceUnTableau(int* tableau, int longueur);
+void frequenceDeuxTableaux(int* tableau, int longueur);
+bool tableauContientChiffresDupliques(int* tableau, int longueur);
+bool tableauContientChiffre(int* tableau, int longueur, int chiffreRecherche);
+bool tableauContientDouble(int* tableau, int longueur);
 
 // Chaines de caracteres
 int longueurChaine(char* chaine);
